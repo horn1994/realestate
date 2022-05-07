@@ -1,0 +1,11 @@
+*.env
+data_fix_version_202204.json
+data.json
+*.csv
+*.xlsx
+*.ipynb
+__pycache__/
+.ipynb_checkpoints/
+venv/""
+models/
+.idea/

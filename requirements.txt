@@ -1,0 +1,10 @@
+datetime
+pandas
+sqlalchemy
+python-decouple
+numpy
+bs4
+requests
+datetime
+random
+time
