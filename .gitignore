@@ -7,5 +7,8 @@ data.json
 __pycache__/
 .ipynb_checkpoints/
 venv/""
-models/
+models/.ipynb_checkpoints/
+models/__pycache__/
+models/*.env
+models/*.json
 .idea/

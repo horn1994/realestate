@@ -28,7 +28,7 @@ def MainCleaner(data, data_name, colnames):
                              else False for column in data.columns]].columns
     for i in numeric_cols:
         try:
-            repl = {"\+ 1 fél": ".5", "m2":""}
+            repl = {"\+ 1 fél": ".5", "m2":"", "\+ 2 fél": "", "\+ 3 fél": "", "\+ 4 fél": ""}
             data[i] = data[i].replace(repl, regex = True)
             data[i] = pd.to_numeric(data[i].str.replace(r'[^0-9|.]+', '', regex = True))
             
