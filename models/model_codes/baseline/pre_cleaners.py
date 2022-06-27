@@ -1,16 +1,14 @@
 import pandas as pd
 import numpy as np
 
-def prefilt(colname, data = lakas):
+def prefilt(data, colname):
     
     if data[colname].isnull().mean() > 0.65:
         data.drop(columns = colname, inplace = True)
     
     return data
 
-def outliers(colname):
-    
-    data = prefilt(colname, data = lakas)
+def outliers(data, colname):
     
     #Censoring non-binary float/int type columns (top 0.001%)
     if data[colname].dtype in ["float64", "int64"]:
@@ -28,9 +26,7 @@ def outliers(colname):
                                     data[colname])        
     return data
 
-def impute_missing(colname):
-    
-    data = outliers(colname)
+def impute_missing(data, colname):
     
     #Non-binary, numeric values (prices, sizes)
     if data[colname].dtype in ["float64", "int64"]:
@@ -59,9 +55,7 @@ def impute_missing(colname):
         
     return data
 
-def normalizer(colname):
-    
-    data = impute_missing(colname)
+def normalizer(data, colname):
     
     if data[colname].dtype in ["float64", "int64"]:
         if ((colname != "id") 
@@ -73,11 +67,9 @@ def normalizer(colname):
                 data.drop(columns = [str(colname)], inplace = True)
     return data
 
-def one_hot_encode(colname):
+def one_hot_encode(data, colname):
     
-    data = normalizer(colname)
-    
-    if data[colname].dtype == 'O':
+    if (data[colname].dtype == 'O'):
         
         data = (data
                 .drop(columns = colname)
