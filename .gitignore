@@ -6,9 +6,11 @@ data.json
 *.ipynb
 __pycache__/
 .ipynb_checkpoints/
-venv/""
+scraper/venv/""
+scraper/*.env
+scraper/.idea/
 models/*.env
 models/*.json
 models/__pycache__/
 models/.ipynb_checkpoints/
-.idea/
+models/model_codes/baseline/__pycache__
