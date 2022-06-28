@@ -1,4 +1,5 @@
 #Project description
+
 This is a "pet-project" which I work on in order to internalize the knowledge I acquire from courses and other resources. I scrape input data and create ML models for real estate price prediction.
 
 **Goals**:
