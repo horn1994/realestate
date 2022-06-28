@@ -12,3 +12,5 @@ This is a "pet-project" which I work on in order to internalize the knowledge I 
 **Folder structure**
 [scraper](https://github.com/horn1994/realestate/tree/main/scraper): functions related to data gathering
 [models](https://github.com/horn1994/realestate/tree/main/models): functions related to ML models
+
+[scraper](https://github.com/horn1994/realestate/tree/main/scraper)
